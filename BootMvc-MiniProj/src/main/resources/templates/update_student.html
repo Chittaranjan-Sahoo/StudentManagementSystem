@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<h1 style="color:red;text-align:ceneter">UpdateStudent</h1>
+
+<form th:action="@{/student/std_edit" th:object="${std}" method="post">
+<table align="center" bgcolor="cyan">
+<tr>
+<td>Student no</td>
+<td><input type="text" th:field=*{sno} readonly="true"/></td>
+</tr>
+<tr>
+<td>Student name</td>
+<td><input type="text" th:field=*{sname}/></td>
+</tr>
+<tr>
+<td>Student course</td>
+<td><input type="text" th:field=*{course}/></td>
+</tr>
+<tr>
+<td>Student fees</td>
+<td><input type="text" th:field=*{fees}/></td>
+</tr>
+<tr>
+<td><input type="submit" value="update"/></td>
+<td><input type="reset" value="cancel" /></td>
+</tr>
+</table>
+</form>
